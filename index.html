@@ -1,0 +1,106 @@
+<!-- Name: Anant Jain
+Student Id: 8869201
+Email: Ajain9201@conestogac.on.ca -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, shrink-to-fit=no"
+    />
+    <title>InstaOrder - Kiosk</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="alignColumn">
+    <!-- Navigation Bar -->
+    <nav id="navbar" class="alignRow">
+      <img src="assets\img\logo.png" id="logo" alt="InstaOrder Logo" />
+      <h2>InstaOrder</h2>
+    </nav>
+    <!-- List of all products being rendered from JS -->
+    <div id="products"></div>
+    <div>
+      <button id="buyNowButton" onclick="showForm()">Buy Now</button>
+    </div>
+    <!-- Form to fill billing details being displayed conditionally -->
+    <div id="alignForm">
+      <form id="form" class="alignColumn">
+        <h2>Billing Details</h2>
+        <div class="alignRow">
+          <label for="name">Full Name:</label>
+          <div class="alignColumn">
+            <input
+              class="textField"
+              type="text"
+              id="name"
+              name="name"
+              placeholder="eg: John Doe"
+            />
+            <div id="nameError" class="errorMessage">Invalid Name.</div>
+          </div>
+          <label for="phone">Phone:</label>
+          <div class="alignColumn">
+            <input
+              class="textField"
+              type="text"
+              id="phone"
+              name="phone"
+              placeholder="eg: xxx-xxx-xxxx"
+            />
+            <div id="phoneError" class="errorMessage">
+              Invalid Phone Number.
+            </div>
+          </div>
+        </div>
+        <h2>Payment Details</h2>
+        <div class="alignRow">
+          <label for="cardNumber">Credit card number:</label>
+          <div class="alignColumn">
+            <input
+              class="textField"
+              type="text"
+              id="cardNumber"
+              name="cardNumber"
+              placeholder="xxxx-xxxx-xxxx-xxxx"
+            />
+            <div id="cardNumberError" class="errorMessage">
+              Invalid Card Number.
+            </div>
+          </div>
+          <label for="month">Month:</label>
+          <div class="alignColumn">
+            <input
+              class="textField"
+              type="text"
+              id="month"
+              name="month"
+              placeholder="XX"
+            />
+            <div id="monthError" class="errorMessage">
+              Invalid Expiry Month.
+            </div>
+          </div>
+          <label for="year">Year:</label>
+          <div class="alignColumn">
+            <input
+              class="textField"
+              type="text"
+              id="year"
+              name="year"
+              placeholder="YYYY"
+            />
+            <div id="yearError" class="errorMessage">Invalid Expiry Year.</div>
+          </div>
+        </div>
+      </form>
+      <button id="placeOrder" onclick="placeOrder()">Place Order</button>
+    </div>
+    <!-- Final order receipt being generated dynamically -->
+    <div id="receipt"></div>
+    <button id="newOrder" onclick="location.reload()">New Order</button>
+    <script src="script.js"></script>
+  </body>
+</html>
